@@ -32,7 +32,7 @@ const HomeStyled = styled.div`
 /* background: rgba(0, 0, 0, 0.5); */
 
   .content{
- display: flex;
+    display: flex;
     justify-content: end;
   }
    

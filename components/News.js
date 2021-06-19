@@ -10,7 +10,7 @@ function News() {
 
         <NewsStyled>
             <Box my={4} maxWidth='456px' mx={["auto","auto","auto",3,3]} width="100%">
-                <Flex mb={3}>
+                <Flex mb={3} ml={[3,3,3,0,0]}>
                     <Box as="h1" >
                         Timelines
                     </Box>

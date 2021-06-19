@@ -15,7 +15,7 @@ function Timeline() {
         <TimelineStyled>
 
             <Box my={4} maxWidth='456px' mx={["auto","auto","auto",3,3]} width="100%">
-                <Flex mb={3}>
+                <Flex mb={3} ml={[3,3,3,0,0]}>
                     <Box as="h1" >
                         Timelines
                     </Box>
@@ -23,9 +23,16 @@ function Timeline() {
                 </Flex>
 
 
-               <TimelineItem />
-               <TimelineItem />
-               <TimelineItem />
+
+                <Flex flexDirection="column" >
+                    <TimelineItem  />
+                    <TimelineItem  />
+                    <TimelineItem  />
+                    {/* <TimelineItem />
+                    <TimelineItem /> */}
+                </Flex>
+
+               
 
 
                
@@ -44,7 +51,6 @@ function Timeline() {
 const TimelineStyled = styled.div`
 
    
-
 
 
 

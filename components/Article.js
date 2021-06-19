@@ -13,7 +13,7 @@ function Article ({articles}) {
         <ArticleStyled>
         
             <Box my={4} maxWidth={470} mx={["auto","auto","auto",3,3]} width="100%">
-                <Flex>
+                <Flex ml={[3,3,3,0,0]}>
                     <Box as="h1" >
                         Editor's pick
                     </Box>

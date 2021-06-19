@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { Flex,Box } from 'reflexbox'
 
 
+
 function toggleMenu(){
     let menu = document.getElementById("menu");
     menu.classList.toggle('active');
@@ -74,7 +75,7 @@ function Header(){
 
 
             </Flex>
-            <Box maxWidth={960} width='100%'  mt={[2,2,2,4,4]} mx={[2,2,2,"auto","auto"]}>
+            <Box px={["5%","5%","5%","5%","15%"]} width="100%"  mt={[2,2,2,4,4]} mx={[2,2,2,"auto","auto"]}>
                 
                 <Flex justifyContent="space-between" mb={[3,3,3,0,0]} >
                     <Box onClick={toggleMenu} display={["block","block","block","none","none"]}>
@@ -93,12 +94,12 @@ function Header(){
                                 <svg className="down-arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="21" viewBox="0 0 28 21"><path d="M8.41 12.53a.75.75 0 0 1 1.06-.12L14 16.04l4.53-3.63a.75.75 0 1 1 .94 1.18l-5 4a.75.75 0 0 1-.94 0l-5-4a.75.75 0 0 1-.12-1.06z" fill="currentColor"></path></svg>
                             </Box>
                         </Flex>
-                        <Flex bg="#f0f3fa" ml={1} height='30px' className="input-wrapper">
+                        <Flex bg="#f0f3fa" ml={1} height='30px' className="main-input-wrapper">
                             <Box pt='2px' color="#787b86">
                                 <svg className="search-logo" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M17.75 16.69a6.59 6.59 0 1 0-1.06 1.06l3.78 3.78a.75.75 0 1 0 1.06-1.06l-3.78-3.78zm-5.16.99a5.09 5.09 0 1 1 0-10.18 5.09 5.09 0 0 1 0 10.18z" fill="currentColor"></path></svg>
                             </Box>
                             <Box width="294px">
-                                <input placeholder="Symbol, eg. AAPL" />
+                                <input className="main-input" placeholder="Symbol, eg. AAPL" />
                             </Box>
                         </Flex>
                     </Box>
@@ -113,20 +114,24 @@ function Header(){
                 </Flex>
 
 
-                <Box width="100%" justifyContent="center" display={["flex","flex","flex","none","none"]}  mb={2}>
-                    <Flex width="20%" justifyContent="center" bg="#f0f3fa" height='30px' px={3} className="launch-chart">
-                        <Box pt='5px'>Launch chart</Box>
+                <Box justifyContent="space-between" display={["flex","flex","flex","none","none"]}  mb={2}>
+                    <Flex  justifyContent="center" bg="#f0f3fa" height='30px' px={3} className="launch-chart">
+                        <Flex pt='5px' width={["250px","150px","150px","0","0"]}>
+                            <Box mr="auto">
+                                Launch chart
+                            </Box>
+                        </Flex>
                         <Box ml={2} >
                             <svg className="down-arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="21" viewBox="0 0 28 21"><path d="M8.41 12.53a.75.75 0 0 1 1.06-.12L14 16.04l4.53-3.63a.75.75 0 1 1 .94 1.18l-5 4a.75.75 0 0 1-.94 0l-5-4a.75.75 0 0 1-.12-1.06z" fill="currentColor"></path></svg>
                         </Box>
                     </Flex>
-                    <Flex width="80%" bg="#f0f3fa" ml={1} height='30px' className="input-wrapper">
-                        <Box pt='2px' color="#787b86">
+                    <Flex mr="auto" width="100%"  bg="#f0f3fa" ml="2px" height='30px' className="input-wrapper">
+                        <Box pt='2px' color="#787b86" px={1}>
                             <svg className="search-logo" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M17.75 16.69a6.59 6.59 0 1 0-1.06 1.06l3.78 3.78a.75.75 0 1 0 1.06-1.06l-3.78-3.78zm-5.16.99a5.09 5.09 0 1 1 0-10.18 5.09 5.09 0 0 1 0 10.18z" fill="currentColor"></path></svg>
                         </Box>
-                        <Box width="294px">
-                            <input  placeholder="Symbol, eg. AAPL" />
-                        </Box>
+                        <Flex justifyContent="left" >
+                            <input className="input"  placeholder="Symbol, eg. AAPL" />
+                        </Flex>
                     </Flex>
                 </Box>
 
@@ -184,19 +189,35 @@ border-bottom: 1px #e0e3eb solid;
     border-bottom-left-radius: 6px;
 }
 
-input{
+.main-input{
+     border: none;
+    outline: none;
+    /* width: 294px; */
+    /* width: 100%; */
+    background: #f0f3fa;
+    padding-top: 5px;
+}
+.input{
     border: none;
     outline: none;
     /* width: 294px; */
-    /* width: 100; */
+    width: 100%;
     background: #f0f3fa;
-    padding-top: 5px;
+    /* padding-top: 5px; */
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .input-wrapper{
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
+
+.main-input-wrapper{
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
 button{
     color: white;
     border: none;

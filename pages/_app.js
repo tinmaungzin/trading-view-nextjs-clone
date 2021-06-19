@@ -4,7 +4,7 @@ import Banner from 'components/Banner'
 
 import { ThemeProvider } from '@emotion/react'
 import GlobalStyles from 'components/GlobalStyles/GlobalStyles'
-import theme from '../theme/theme.js'
+import theme from '../theme/theme'
 
 
 function MyApp({ Component, pageProps }) {

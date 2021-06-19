@@ -13,7 +13,7 @@ function Chart() {
 
         <ChartStyled>
             <Box my={4} maxWidth='456px' mx={["auto","auto","auto",3,3]} width="100%">
-                <Flex>
+                <Flex ml={[3,3,3,0,0]}>
                     <Box as="h1" >
                         Market Summary
                     </Box>
