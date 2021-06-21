@@ -1,48 +1,37 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
-import NewsItem from 'components/NewsItem'
-import { Flex,Box } from 'reflexbox'
-
-
+import NewsItem from "components/NewsItem";
+import { Flex, Box } from "reflexbox";
 
 function News() {
-    return(
+  return (
+    <NewsStyled>
+      <Box
+        my={4}
+        maxWidth="456px"
+        mx={["auto", "auto", "auto", 3, 3]}
+        width="100%"
+      >
+        <Flex mb={3} ml={0}>
+          <Box as="h1">News</Box>
+        </Flex>
 
-        <NewsStyled>
-            <Box my={4} maxWidth='456px' mx={["auto","auto","auto",3,3]} width="100%">
-                <Flex mb={3} ml={[3,3,3,0,0]}>
-                    <Box as="h1" >
-                        Timelines
-                    </Box>
-                
-                </Flex>
-
-
-                <NewsItem />
-                <NewsItem />
-                <NewsItem />
-                <NewsItem />
-
-               
-
-            </Box>
-
-        </NewsStyled>
-
-    )
+        <NewsItem />
+        <NewsItem />
+        <NewsItem />
+        <NewsItem />
+      </Box>
+    </NewsStyled>
+  );
 }
 
 const NewsStyled = styled.div`
-
-    /* h1{
+  /* h1{
         margin-top: 30px;
         margin-bottom: 20px;
     }
 
     margin-bottom: 30px; */
+`;
 
-
-
-`
-
-export default News
+export default News;

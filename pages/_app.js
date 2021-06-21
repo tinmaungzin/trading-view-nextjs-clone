@@ -1,11 +1,10 @@
-import '../styles/globals.css'
-import Header from 'components/Header'
-import Banner from 'components/Banner'
+import "../styles/globals.css";
+import Header from "components/Header";
+import Banner from "components/Banner";
 
-import { ThemeProvider } from '@emotion/react'
-import GlobalStyles from 'components/GlobalStyles/GlobalStyles'
-import theme from '../theme/theme'
-
+import { ThemeProvider } from "@emotion/react";
+import GlobalStyles from "components/GlobalStyles/GlobalStyles";
+import theme from "../theme/theme";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,10 +15,8 @@ function MyApp({ Component, pageProps }) {
         <Banner />
         <Component {...pageProps} />
       </ThemeProvider>
-      
-
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
