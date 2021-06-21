@@ -318,13 +318,18 @@ function Header() {
             justifyContent="center"
             bg="#f0f3fa"
             height="30px"
-            px={3}
+            // px={3}
+            pl={2}
             className="launch-chart"
+            minWidth="131px"
           >
-            <Flex pt="5px" width={["250px", "150px", "150px", "0", "0"]}>
-              <Box mr="auto">Launch chart</Box>
+            <Flex
+              pt="5px"
+              //   width={["250px", "150px", "150px", "0", "0"]}
+            >
+              <Box>Launch chart</Box>
             </Flex>
-            <Box ml={2}>
+            <Box>
               <svg
                 className="down-arrow"
                 xmlns="http://www.w3.org/2000/svg"

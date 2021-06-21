@@ -73,7 +73,10 @@ function Footer() {
             justifyContent={["center", "center", "center", null, null]}
             my={[3, 3, 3, 0, 0]}
           >
-            <Box display={["none", "none", "none", "block", "block"]}>
+            <Box
+              display={["none", "none", "none", "block", "block"]}
+              minWidth="160px"
+            >
               <Flex bg="#f0f3fa" px={3} py={1} sx={{ borderRadius: "3px" }}>
                 <Image
                   className="desktop-svg"
@@ -88,7 +91,7 @@ function Footer() {
                 </Flex>
               </Flex>
             </Box>
-            <Box bg="#f0f3fa" ml={3} sx={{ borderRadius: "3px" }} pt={1} px={2}>
+            <Box bg="#f0f3fa" ml={3} sx={{ borderRadius: "3px" }} pt={2} px={2}>
               <Image
                 className="desktop-svg"
                 src="/apple.svg"
@@ -97,7 +100,7 @@ function Footer() {
                 height="40"
               />
             </Box>
-            <Box bg="#f0f3fa" ml={3} sx={{ borderRadius: "3px" }} pt={1} px={2}>
+            <Box bg="#f0f3fa" ml={3} sx={{ borderRadius: "3px" }} pt={2} px={2}>
               <Image
                 className="desktop-svg"
                 src="/playstore.svg"
@@ -110,9 +113,19 @@ function Footer() {
           <Flex
             px={5}
             justifyContent={["center", "center", "center", null, null]}
+            alignItems="center"
             my={[3, 3, 3, 0, 0]}
           >
-            <Box bg="#f0f3fa" mx={2} pt={2} sx={{ borderRadius: "3px" }} px={2}>
+            <Flex
+              bg="#f0f3fa"
+              mx={2}
+              sx={{ borderRadius: "3px" }}
+              px={2}
+              minWidth="40px"
+              minHeight="40px"
+              justifyContent="center"
+              alignItems="center"
+            >
               <svg
                 className="social-svg"
                 width="28"
@@ -125,8 +138,17 @@ function Footer() {
                   fill="#1877F2"
                 ></path>
               </svg>
-            </Box>
-            <Box bg="#f0f3fa" mx={2} pt={2} sx={{ borderRadius: "3px" }} px={2}>
+            </Flex>
+            <Flex
+              bg="#f0f3fa"
+              mx={2}
+              sx={{ borderRadius: "3px" }}
+              px={2}
+              minWidth="40px"
+              minHeight="40px"
+              justifyContent="center"
+              alignItems="center"
+            >
               <svg
                 className="social-svg"
                 width="28"
@@ -139,8 +161,17 @@ function Footer() {
                   fill="#1DA1F2"
                 ></path>
               </svg>
-            </Box>
-            <Box bg="#f0f3fa" mx={2} pt={2} sx={{ borderRadius: "3px" }} px={2}>
+            </Flex>
+            <Flex
+              bg="#f0f3fa"
+              mx={2}
+              sx={{ borderRadius: "3px" }}
+              px={2}
+              minWidth="40px"
+              minHeight="40px"
+              justifyContent="center"
+              alignItems="center"
+            >
               <svg
                 className="social-svg"
                 width="28"
@@ -153,7 +184,7 @@ function Footer() {
                   fill="#2867B2"
                 ></path>
               </svg>
-            </Box>
+            </Flex>
           </Flex>
         </Flex>
 
@@ -184,11 +215,17 @@ function Footer() {
               <Box py={[2, 2, 2, 0, 0]} pr={1}>
                 Select market data provided by
               </Box>
-              <Box py={[2, 2, 2, 0, 0]} className="company">
+              <Box
+                py={[2, 2, 2, 0, 0]}
+                className="company"
+                mx={["auto", "auto", "auto", 0, 0]}
+              >
                 ICE Data Services
               </Box>
             </Flex>
-            <Box py={[2, 2, 2, 0, 0]}>© 2021 TradingView</Box>
+            <Box py={[2, 2, 2, 0, 0]} mx={["auto", "auto", "auto", 0, 0]}>
+              © 2021 TradingView
+            </Box>
           </Flex>
         </Flex>
       </Box>
