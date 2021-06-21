@@ -180,11 +180,15 @@ function Footer() {
             mx={["auto", "auto", "auto", 0, 0]}
             py={2}
           >
-            <Box>
-              Select market data provided by{" "}
-              <span className="company">ICE Data Services</span>
-            </Box>
-            <Box>© 2021 TradingView</Box>
+            <Flex flexDirection={["column", "column", "column", "row", "row"]}>
+              <Box py={[2, 2, 2, 0, 0]} pr={1}>
+                Select market data provided by
+              </Box>
+              <Box py={[2, 2, 2, 0, 0]} className="company">
+                ICE Data Services
+              </Box>
+            </Flex>
+            <Box py={[2, 2, 2, 0, 0]}>© 2021 TradingView</Box>
           </Flex>
         </Flex>
       </Box>
