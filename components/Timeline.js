@@ -11,13 +11,17 @@ function Timeline() {
         my={4}
         maxWidth="456px"
         mx={["auto", "auto", "auto", 3, 3]}
-        width="100%"
+        // width="100%"
+        overflow="hidden"
       >
         <Flex mb={3} ml={0}>
           <Box as="h1">Timelines</Box>
         </Flex>
 
-        <Flex flexDirection="column">
+        <Flex
+          flexDirection={["row", "row", "row", "column", "column"]}
+          overflowX="scroll"
+        >
           <TimelineItem />
           <TimelineItem />
           <TimelineItem />

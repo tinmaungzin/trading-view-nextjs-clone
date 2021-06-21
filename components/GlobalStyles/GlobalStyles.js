@@ -4,6 +4,12 @@ const GlobalStyles = () => (
   <>
     <Global
       styles={css`
+        * {
+          -ms-overflow-style: none;
+        }
+        ::-webkit-scrollbar {
+          display: none;
+        }
         html {
           line-height: 1.15; /* 1 */
           -ms-text-size-adjust: 100%; /* 2 */

@@ -16,10 +16,15 @@ function News() {
           <Box as="h1">News</Box>
         </Flex>
 
-        <NewsItem />
-        <NewsItem />
-        <NewsItem />
-        <NewsItem />
+        <Flex
+          flexDirection={["row", "row", "row", "column", "column"]}
+          overflowX="auto"
+        >
+          <NewsItem />
+          <NewsItem />
+          <NewsItem />
+          <NewsItem />
+        </Flex>
       </Box>
     </NewsStyled>
   );
