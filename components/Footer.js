@@ -5,8 +5,9 @@ import Image from "next/image";
 import { Flex, Box } from "reflexbox";
 
 function footerToggle(e) {
-  let clicked = e.id + "-child";
+  let clicked = e.target.id + "-child";
   let target = document.getElementById(clicked);
+  console.log(target);
   target.classList.toggle("active");
 }
 
@@ -30,9 +31,13 @@ function Footer() {
                 "0px #f0f3fa solid",
               ],
             }}
+            className="products"
           >
-            <Flex justifyContent="space-between">
-              <Box fontWeight="bold" mb={2}>
+            <Flex
+              justifyContent="space-between"
+              onClick={(e) => footerToggle(e)}
+            >
+              <Box fontWeight="bold" mb={2} className="products">
                 Products
               </Box>
               <Box
@@ -40,12 +45,12 @@ function Footer() {
                 height="8px"
                 mr={3}
                 display={["block", "block", "block", "none", "none"]}
-                onClick={(e) => footerToggle(e.target)}
+                id="products"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 12 8"
-                  id="products"
+                  className="products"
                 >
                   <path
                     d="m1 6 5-4 5 4"
@@ -60,7 +65,7 @@ function Footer() {
             <Box
               id="products-child"
               display={["none", "none", "none", "block", "block"]}
-              className=""
+              className="placeholder"
             >
               <Box py={1}>Chart</Box>
               <Box py={1}>Pine Script</Box>
@@ -85,7 +90,11 @@ function Footer() {
               ],
             }}
           >
-            <Flex justifyContent="space-between" pt={[3, 3, 3, 0, 0]}>
+            <Flex
+              justifyContent="space-between"
+              pt={[3, 3, 3, 0, 0]}
+              onClick={(e) => footerToggle(e)}
+            >
               <Box fontWeight="bold" mb={2}>
                 Company
               </Box>
@@ -94,13 +103,9 @@ function Footer() {
                 height="8px"
                 mr={3}
                 display={["block", "block", "block", "none", "none"]}
-                onClick={(e) => footerToggle(e.target)}
+                id="company"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 12 8"
-                  id="company"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8">
                   <path
                     d="m1 6 5-4 5 4"
                     fill="none"
@@ -143,7 +148,11 @@ function Footer() {
               ],
             }}
           >
-            <Flex justifyContent="space-between" pt={[3, 3, 3, 0, 0]}>
+            <Flex
+              justifyContent="space-between"
+              pt={[3, 3, 3, 0, 0]}
+              onClick={(e) => footerToggle(e)}
+            >
               <Box fontWeight="bold" mb={2}>
                 Community
               </Box>
@@ -151,14 +160,10 @@ function Footer() {
                 width="12px"
                 height="8px"
                 mr={3}
+                id="community"
                 display={["block", "block", "block", "none", "none"]}
-                onClick={(e) => footerToggle(e.target)}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 12 8"
-                  id="community"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8">
                   <path
                     d="m1 6 5-4 5 4"
                     fill="none"
@@ -198,7 +203,11 @@ function Footer() {
               ],
             }}
           >
-            <Flex justifyContent="space-between" pt={[3, 3, 3, 0, 0]}>
+            <Flex
+              justifyContent="space-between"
+              pt={[3, 3, 3, 0, 0]}
+              onClick={(e) => footerToggle(e)}
+            >
               <Box fontWeight="bold" mb={2}>
                 For business
               </Box>
@@ -207,13 +216,9 @@ function Footer() {
                 height="8px"
                 mr={3}
                 display={["block", "block", "block", "none", "none"]}
-                onClick={(e) => footerToggle(e.target)}
+                id="business"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 12 8"
-                  id="business"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8">
                   <path
                     d="m1 6 5-4 5 4"
                     fill="none"
