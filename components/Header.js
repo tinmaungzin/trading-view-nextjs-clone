@@ -319,7 +319,7 @@ function Header() {
             bg="#f0f3fa"
             height="30px"
             // px={3}
-            pl={2}
+            pl={1}
             className="launch-chart"
             minWidth="131px"
           >

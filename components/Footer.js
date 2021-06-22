@@ -4,70 +4,259 @@ import Image from "next/image";
 
 import { Flex, Box } from "reflexbox";
 
+function footerToggle(e) {
+  let clicked = e.id + "-child";
+  let target = document.getElementById(clicked);
+  target.classList.toggle("active");
+}
+
 function Footer() {
   return (
     <FooterStyled>
       <Box pt={4} maxWidth={1050} width="100%" mx="auto" mb={5}>
-        <Flex justifyContent="space-around">
-          <Box>
-            <Box fontWeight="bold" mb={2}>
-              Products
+        <Flex
+          justifyContent="space-around"
+          flexDirection={["column", "column", "column", "row", "row"]}
+        >
+          <Box
+            pb={[3, 3, 3, 0, 0]}
+            pl={[3, 3, 3, 0, 0]}
+            sx={{
+              borderBottom: [
+                "1px #f0f3fa solid",
+                "1px #f0f3fa solid",
+                "1px #f0f3fa solid",
+                "0px #f0f3fa solid",
+                "0px #f0f3fa solid",
+              ],
+            }}
+          >
+            <Flex justifyContent="space-between">
+              <Box fontWeight="bold" mb={2}>
+                Products
+              </Box>
+              <Box
+                width="12px"
+                height="8px"
+                mr={3}
+                display={["block", "block", "block", "none", "none"]}
+                onClick={(e) => footerToggle(e.target)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 12 8"
+                  id="products"
+                >
+                  <path
+                    d="m1 6 5-4 5 4"
+                    fill="none"
+                    stroke="currentcolor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+              </Box>
+            </Flex>
+            <Box
+              id="products-child"
+              display={["none", "none", "none", "block", "block"]}
+              className=""
+            >
+              <Box py={1}>Chart</Box>
+              <Box py={1}>Pine Script</Box>
+              <Box py={1}>Stock Screener</Box>
+              <Box py={1}>Forex Screener</Box>
+              <Box py={1}>Crypto Screener</Box>
+              <Box py={1}>Economic Calender </Box>
+              <Box py={1}>Earning Calender </Box>
             </Box>
-            <Box py={1}>Chart</Box>
-            <Box py={1}>Pine Script</Box>
-            <Box py={1}>Stock Screener</Box>
-            <Box py={1}>Forex Screener</Box>
-            <Box py={1}>Crypto Screener</Box>
-            <Box py={1}>Economic Calender </Box>
-            <Box py={1}>Earning Calender </Box>
           </Box>
 
-          <Box>
-            <Box fontWeight="bold" mb={2}>
-              Company
+          <Box
+            pb={[3, 3, 3, 0, 0]}
+            pl={[3, 3, 3, 0, 0]}
+            sx={{
+              borderBottom: [
+                "1px #f0f3fa solid",
+                "1px #f0f3fa solid",
+                "1px #f0f3fa solid",
+                "0px #f0f3fa solid",
+                "0px #f0f3fa solid",
+              ],
+            }}
+          >
+            <Flex justifyContent="space-between" pt={[3, 3, 3, 0, 0]}>
+              <Box fontWeight="bold" mb={2}>
+                Company
+              </Box>
+              <Box
+                width="12px"
+                height="8px"
+                mr={3}
+                display={["block", "block", "block", "none", "none"]}
+                onClick={(e) => footerToggle(e.target)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 12 8"
+                  id="company"
+                >
+                  <path
+                    d="m1 6 5-4 5 4"
+                    fill="none"
+                    stroke="currentcolor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+              </Box>
+            </Flex>
+            <Box
+              display={["none", "none", "none", "block", "block"]}
+              id="company-child"
+              className=""
+            >
+              <Box py={1}>About</Box>
+              <Box py={1}>Features</Box>
+              <Box py={1}>Pricing</Box>
+              <Box py={1}>Wall of Love</Box>
+              <Box py={1}>Blog</Box>
+              <Box py={1}>Security vulnerability</Box>
+              <Box py={1}>Status page</Box>
+              <Box py={1}>Terms of use</Box>
+              <Box py={1}>Disclaimer</Box>
+              <Box py={1}>Privacy policy</Box>
+              <Box py={1}>Cookies police</Box>
             </Box>
-            <Box py={1}>About</Box>
-            <Box py={1}>Features</Box>
-            <Box py={1}>Pricing</Box>
-            <Box py={1}>Wall of Love</Box>
-            <Box py={1}>Blog</Box>
-            <Box py={1}>Security vulnerability</Box>
-            <Box py={1}>Status page</Box>
-            <Box py={1}>Terms of use</Box>
-            <Box py={1}>Disclaimer</Box>
-            <Box py={1}>Privacy policy</Box>
-            <Box py={1}>Cookies police</Box>
           </Box>
-          <Box>
-            <Box fontWeight="bold" mb={2}>
-              Community
+
+          <Box
+            pb={[3, 3, 3, 0, 0]}
+            pl={[3, 3, 3, 0, 0]}
+            sx={{
+              borderBottom: [
+                "1px #f0f3fa solid",
+                "1px #f0f3fa solid",
+                "1px #f0f3fa solid",
+                "0px #f0f3fa solid",
+                "0px #f0f3fa solid",
+              ],
+            }}
+          >
+            <Flex justifyContent="space-between" pt={[3, 3, 3, 0, 0]}>
+              <Box fontWeight="bold" mb={2}>
+                Community
+              </Box>
+              <Box
+                width="12px"
+                height="8px"
+                mr={3}
+                display={["block", "block", "block", "none", "none"]}
+                onClick={(e) => footerToggle(e.target)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 12 8"
+                  id="community"
+                >
+                  <path
+                    d="m1 6 5-4 5 4"
+                    fill="none"
+                    stroke="currentcolor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+              </Box>
+            </Flex>
+            <Box
+              display={["none", "none", "none", "block", "block"]}
+              id="community-child"
+              className=""
+            >
+              <Box py={1}>Refer a friend</Box>
+              <Box py={1}>Ideas</Box>
+              <Box py={1}>Scripts</Box>
+              <Box py={1}>Streams</Box>
+              <Box py={1}>House rules</Box>
+              <Box py={1}>Moderators</Box>
+              <Box py={1}>Pine Wizards</Box>
+              <Box py={1}>Chat</Box>
             </Box>
-            <Box py={1}>Refer a friend</Box>
-            <Box py={1}>Ideas</Box>
-            <Box py={1}>Scripts</Box>
-            <Box py={1}>Streams</Box>
-            <Box py={1}>House rules</Box>
-            <Box py={1}>Moderators</Box>
-            <Box py={1}>Pine Wizards</Box>
-            <Box py={1}>Chat</Box>
           </Box>
-          <Box>
-            <Box fontWeight="bold" mb={2}>
-              For business
+
+          <Box
+            pb={[3, 3, 3, 0, 0]}
+            pl={[3, 3, 3, 0, 0]}
+            sx={{
+              borderBottom: [
+                "1px #f0f3fa solid",
+                "1px #f0f3fa solid",
+                "1px #f0f3fa solid",
+                "0px #f0f3fa solid",
+                "0px #f0f3fa solid",
+              ],
+            }}
+          >
+            <Flex justifyContent="space-between" pt={[3, 3, 3, 0, 0]}>
+              <Box fontWeight="bold" mb={2}>
+                For business
+              </Box>
+              <Box
+                width="12px"
+                height="8px"
+                mr={3}
+                display={["block", "block", "block", "none", "none"]}
+                onClick={(e) => footerToggle(e.target)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 12 8"
+                  id="business"
+                >
+                  <path
+                    d="m1 6 5-4 5 4"
+                    fill="none"
+                    stroke="currentcolor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+              </Box>
+            </Flex>
+            <Box
+              display={["none", "none", "none", "block", "block"]}
+              id="business-child"
+              className=""
+            >
+              <Box py={1}>Wigets</Box>
+              <Box py={1}>Advertising</Box>
+              <Box py={1}>Website & broker solutions</Box>
+              <Box py={1}>Charting solutions</Box>
+              <Box py={1}>Lightweight Charting Library</Box>
+              <Box py={1}>Brokerage integration</Box>
+              <Box py={1}>Partner program</Box>
+              <Box py={1}>Content streams & RSS</Box>
             </Box>
-            <Box py={1}>Wigets</Box>
-            <Box py={1}>Advertising</Box>
-            <Box py={1}>Website & broker solutions</Box>
-            <Box py={1}>Charting solutions</Box>
-            <Box py={1}>Lightweight Charting Library</Box>
-            <Box py={1}>Brokerage integration</Box>
-            <Box py={1}>Partner program</Box>
-            <Box py={1}>Content streams & RSS</Box>
           </Box>
         </Flex>
       </Box>
 
-      <Box width="70%" className="lower" mx="auto" mb={5} pt={3}>
+      <Box
+        width="70%"
+        mx="auto"
+        mb={5}
+        pt={3}
+        sx={{
+          borderTop: [
+            "0px #e0e3eb solid",
+            "0px #e0e3eb solid",
+            "0px #e0e3eb solid",
+            "2px #e0e3eb solid",
+            "2px #e0e3eb solid",
+          ],
+        }}
+      >
         <Flex flexDirection={["column", "column", "column", "row", "row"]}>
           <Flex
             justifyContent={["center", "center", "center", null, null]}
@@ -236,12 +425,17 @@ function Footer() {
 const FooterStyled = styled.div`
   border-top: 2px #e0e3eb solid;
 
-  .lower {
-    border-top: 2px #e0e3eb solid;
-  }
-
   .company {
     color: #6762ff;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .product-child {
+    overflow-y: hidden;
+    transition: 0.5s;
   }
 `;
 

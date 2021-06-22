@@ -10,8 +10,9 @@ function Chart() {
     <ChartStyled>
       <Box
         my={4}
-        maxWidth="456px"
-        mx={["auto", "auto", "auto", 3, 3]}
+        maxWidth={[1200,1200,1200,470,470]}
+        ml={2} mr={2}
+        // mx={["auto", "auto", "auto", 3, 3]}
         width="100%"
       >
         <Flex ml={0}>
@@ -52,7 +53,7 @@ function Chart() {
             Bonds
           </Box>
         </Flex>
-        <Box>
+        <Box width={["100%","100%","100%","456","456"]}>
           <Image
             className="photo"
             src="/chart1.png"
