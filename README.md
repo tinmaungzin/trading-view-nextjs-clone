@@ -2,6 +2,18 @@ You can find live version of application on
 
 https://trading-view-nextjs-clone-git-main-tinmaungzin.vercel.app/
 
+Strapi Backend Github Repo is here 
+
+https://github.com/tinmaungzin/trading-view-strapi-clone
+
+and it is live on Heroku 
+
+https://trading-view-strapi-clone.herokuapp.com/admin 
+
+You can login with following credentials:
+email: admin@admin.com
+password: P@$$word
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
