@@ -137,7 +137,7 @@ function ArticleItem({ article }) {
           </Flex>
         </Flex>
         <Link href="/articles/[id]" as={`/articles/${article.id}`}>
-          <Box> Here is link</Box>
+          <Box> Here is detail link.</Box>
         </Link>
       </Box>
     </ArticleItemStyled>
