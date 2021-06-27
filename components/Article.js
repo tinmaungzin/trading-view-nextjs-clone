@@ -7,6 +7,7 @@ import ArticleItem from "components/ArticleItem";
 import { Flex, Box } from "reflexbox";
 
 function Article({ articles }) {
+  console.log(articles);
   return (
     <ArticleStyled>
       <Flex
@@ -40,22 +41,14 @@ function Article({ articles }) {
           </Box>
         </Flex>
 
+        {articles.map((article) => (
+          <ArticleItem key={article.id} article={article} />
+        ))}
+
+        {/* <ArticleItem />
         <ArticleItem />
-        <ArticleItem />
-        <ArticleItem />
-        {/* <ArticleItem /> */}
+        <ArticleItem /> */}
       </Flex>
-
-      {/* // <ArticleStyled>
-        //     <h1>Editor's pick
-        //         <svg className="side-arrow" xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14">
-        //             <path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="square" stroke-width="2" d="M2 2l4 5-4 5"></path>
-        //         </svg>
-        //     </h1>
-
-        //     {articles.map(article =>(
-        //         <ArticleItem key={article.id} article={article} />
-        //     ))} */}
     </ArticleStyled>
   );
 }

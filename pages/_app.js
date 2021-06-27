@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import Header from "components/Header";
-import Banner from "components/Banner";
+import Footer from "components/Footer";
 
 import { ThemeProvider } from "@emotion/react";
 import GlobalStyles from "components/GlobalStyles/GlobalStyles";
@@ -12,8 +12,8 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Header />
-        <Banner />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   );

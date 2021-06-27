@@ -192,7 +192,7 @@ function Header() {
       </Flex>
       <Box
         px={["3%", "3%", "3%", "3%", "15%"]}
-        width="100%"
+        maxWidth={1200}
         mt={[2, 2, 2, 4, 4]}
         mx={[2, 2, 2, "auto", "auto"]}
       >
@@ -376,6 +376,7 @@ function Header() {
           mt={3}
           justifyContent="left"
           display={["none", "none", "none", "flex", "flex"]}
+          mb={3}
         >
           <Flex mr={3} className="nav-item">
             <Box>

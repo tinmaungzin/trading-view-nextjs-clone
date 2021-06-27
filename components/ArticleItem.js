@@ -3,9 +3,11 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 
 import { Flex, Box } from "reflexbox";
+import Link from "next/link";
 
 function ArticleItem({ article }) {
   const { API_URL } = process.env;
+  console.log(article);
 
   return (
     <ArticleItemStyled>
@@ -18,7 +20,7 @@ function ArticleItem({ article }) {
         flex="none"
       >
         <Flex justifyContent="space-between">
-          <Box as="h2">Lorem Ipsum lorem lorrm lore m lk9oknkljlkhnjol</Box>
+          <Box as="h2">{article.title}</Box>
           <Box>
             <svg
               width="28"
@@ -36,7 +38,7 @@ function ArticleItem({ article }) {
             </svg>
           </Box>
         </Flex>
-        <Box as="p">WAX</Box>
+        <Box as="p">{article.symbol}</Box>
 
         <Box my={3}>
           <Image src="/test.png" alt="me" width="440" height="254" />
@@ -48,7 +50,7 @@ function ArticleItem({ article }) {
               <Image src="/test.png" alt="me" width="28" height="28" />
             </Box>
             <Box as="p" pl={2} pt={1}>
-              Stephen King
+              {article.authors[0].name}
             </Box>
             <Box
               as="p"
@@ -60,16 +62,13 @@ function ArticleItem({ article }) {
               bg="#ef5350"
               sx={{ borderRadius: "20px" }}
             >
-              PRO
+              {article.authors[0].type}
             </Box>
           </Flex>
           <Box color="#979aa2">Jan 4</Box>
         </Flex>
         <Box mt={3} className="line-clamp">
-          1. Commodity Currencies Australia, Canada, and New Zealand all have
-          commodities that fluctuate with respect to commodity prices. As demand
-          for these countries' export has risen and commodities have increased
-          in value, these three currencies and over more
+          {article.content}
         </Box>
 
         <Flex justifyContent="space-between" my={3}>
@@ -88,7 +87,7 @@ function ArticleItem({ article }) {
               </g>
             </svg>
             <Box as="p" pt={1} ml={1}>
-              170
+              {article.like_count}
             </Box>
           </Flex>
           <Flex py={2}>
@@ -104,7 +103,7 @@ function ArticleItem({ article }) {
                 </g>
               </svg>
               <Box as="p" ml={2} pt={1}>
-                50
+                {article.comment_count}
               </Box>
             </Flex>
             <Box px={3}>
@@ -137,6 +136,9 @@ function ArticleItem({ article }) {
             </Box>
           </Flex>
         </Flex>
+        <Link href="/articles/[id]" as={`/articles/${article.id}`}>
+          <Box> Here is link</Box>
+        </Link>
       </Box>
     </ArticleItemStyled>
   );
